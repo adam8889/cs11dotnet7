@@ -5,9 +5,11 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WritingFunctions", "WritingFunctions\WritingFunctions.csproj", "{E6A4EAAF-3791-435F-9DBA-0465CB41D73D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging\Debugging.csproj", "{C3F68A5D-D95B-4BBA-9C92-220DDDA56D98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debugging", "Debugging\Debugging.csproj", "{C3F68A5D-D95B-4BBA-9C92-220DDDA56D98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotReloading", "HotReloading\HotReloading.csproj", "{475158B3-662E-415E-9E2F-7AE9C4054511}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotReloading", "HotReloading\HotReloading.csproj", "{475158B3-662E-415E-9E2F-7AE9C4054511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Instrumenting", "Instrumenting\Instrumenting.csproj", "{B7AC6C1F-37DA-49E5-9B01-AC8F77FDEC0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{475158B3-662E-415E-9E2F-7AE9C4054511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{475158B3-662E-415E-9E2F-7AE9C4054511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{475158B3-662E-415E-9E2F-7AE9C4054511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7AC6C1F-37DA-49E5-9B01-AC8F77FDEC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7AC6C1F-37DA-49E5-9B01-AC8F77FDEC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7AC6C1F-37DA-49E5-9B01-AC8F77FDEC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7AC6C1F-37DA-49E5-9B01-AC8F77FDEC0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
