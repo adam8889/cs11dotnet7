@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Packt.Shared; //file-scoped namespace
@@ -50,5 +51,48 @@ public class Person : object
     public (string Name, int Number) GetNamedFruit()
     {
         return (Name: "Apples", Number: 5);
+    }
+
+    public void Deconstruct(out string? name, out DateTime dob)
+    {
+        name = Name;
+        dob = DateOfBirth;
+    }
+
+    public void Deconstruct(out string? name, out DateTime dob, out WondersOfTheAncientWorld fav)
+    {
+        name = Name;
+        dob = DateOfBirth;
+        fav = FavoriteAncientWonder;
+    }
+
+    public string SayHello()
+    {
+        return $"{Name} says 'Hello!'";
+    }
+
+    public string SayHello(string name)
+    {
+        return $"{Name} says 'Hello, {name}!'";
+    }
+
+    public string OptionalParameters(string command = "Run!", double number = 0.0, bool active = true)
+    {
+        return string.Format(
+            format: "command is {0}, number is {1}, active is {2}",
+            arg0: command,
+            arg1: number,
+            arg2: active);
+    }
+
+    public void PassingParameters(int x, ref int y, out int z)
+    {
+        //out parameters cannot have a default value, and must be initialized inside method
+        z = 99;
+
+        //increment each param
+        x++;
+        y++;
+        z++;
     }
 }

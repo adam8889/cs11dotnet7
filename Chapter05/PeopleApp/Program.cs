@@ -61,3 +61,25 @@ WriteLine($"{thing2.Name} has {thing2.Count} children.");
 
 (string fruitName, int frutNumber) = bob.GetNamedFruit();
 WriteLine($"Deconstructed: {fruitName}, {frutNumber}");
+
+//deconstructing a person
+var (name1, dob1) = bob; //implicetly calls the deconstruct method
+WriteLine($"Deconstructed: {name1}, {dob1}");
+
+var (name2, dob2, fav2) = bob;
+WriteLine($"Deconstructed: {name2}, {dob2}, {fav2}");
+
+WriteLine(bob.SayHello());
+WriteLine(bob.SayHello("Emily"));
+WriteLine(bob.OptionalParameters());
+WriteLine(bob.OptionalParameters("Jump!", 98.5));
+WriteLine(bob.OptionalParameters(number: 52.5, command: "Hide!"));
+WriteLine(bob.OptionalParameters("Poke!", active: false));
+
+int a = 10;
+int b = 20;
+int c = 30;
+
+WriteLine($"Before: a = {a}, b = {b}, c = {c}");
+bob.PassingParameters(a, ref b, out c);
+WriteLine($"After: a = {a}, b = {b}, c = {c}");
