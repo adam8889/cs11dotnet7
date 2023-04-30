@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace Packt.Shared
@@ -46,6 +47,107 @@ namespace Packt.Shared
                     default:
                         throw new ArgumentException($"{value} is not a primary color. Choose from: red, green, blue.");
                 }
+            }
+        }
+
+        private bool married = false;
+        public bool Married => married;
+
+        private Person? spouse = null;
+        public Person? Spouse => spouse;
+
+        //indexers
+        public Person this[int index]
+        {
+            get
+            {
+                return Children[index]; //pass on to the List<T> indexer
+            }
+
+            set
+            {
+                Children[index] = value;
+            }
+        }
+
+        public Person this[string name]
+        {
+            get
+            {
+                return Children.Find(p => p.Name == name);
+            }
+
+            set
+            {
+                Person found = Children.Find(p => p.Name == name);
+                if (found is not null) found = value;
+            }
+        }
+
+        //static method to Marry
+        public static void Marry(Person p1, Person p2)
+        {
+            p1.Marry(p2);
+        }
+
+        //instance method to Marry
+        public void Marry(Person partner)
+        {
+            if (married) return;
+
+            spouse = partner;
+            married = true;
+            partner.Marry(this);
+        }
+
+        //static method to "multiply"
+        public static Person Procreate(Person p1, Person p2)
+        {
+            if (p1.Spouse != p2) throw new ArgumentException("You must be married to procreate.");
+
+            Person baby = new()
+            {
+                Name = $"Babay of {p1.Name} and {p2.Name}.",
+                DateOfBirth = DateTime.Now
+            };
+
+            p1.Children.Add(baby);
+            p2.Children.Add(baby);
+
+            return baby;
+        }
+
+        //instance method to "multiply"
+        public Person ProcreateWith(Person partner)
+        {
+            return Procreate(this, partner);
+        }
+
+        //operator to "marry"
+        public static bool operator +(Person p1, Person p2)
+        {
+            Marry(p1, p2);
+            return p1.Married && p2.Married;
+        }
+
+        //operator to "multiply"
+        public static Person operator *(Person p1, Person p2)
+        {
+            return Procreate(p1, p2);
+        }
+
+        //method with a local function
+        public static int Factorial(int number)
+        {
+            if (number < 0) throw new ArgumentException($"{nameof(number)} cannot be less than zero.");
+
+            return localFactorial(number);
+
+            int localFactorial(int localNumber)
+            {
+                if (localNumber == 0) return 1;
+
+                return localNumber * localFactorial(localNumber - 1);
             }
         }
     }
