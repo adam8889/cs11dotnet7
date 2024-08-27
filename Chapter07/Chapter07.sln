@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssembliesAndNamespaces", "AssembliesAndNamespaces\AssembliesAndNamespaces.csproj", "{0E9DEC5F-E032-4F51-8BF3-77538EFE0565}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssembliesAndNamespaces", "AssembliesAndNamespaces\AssembliesAndNamespaces.csproj", "{0E9DEC5F-E032-4F51-8BF3-77538EFE0565}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{D625CCBB-F2CE-466B-BE3C-A0D422503145}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetEverywhere", "DotNetEverywhere\DotNetEverywhere.csproj", "{0AA4CE62-2BB2-4A07-9DF1-7B0C536DD139}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{0E9DEC5F-E032-4F51-8BF3-77538EFE0565}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E9DEC5F-E032-4F51-8BF3-77538EFE0565}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E9DEC5F-E032-4F51-8BF3-77538EFE0565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D625CCBB-F2CE-466B-BE3C-A0D422503145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D625CCBB-F2CE-466B-BE3C-A0D422503145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D625CCBB-F2CE-466B-BE3C-A0D422503145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D625CCBB-F2CE-466B-BE3C-A0D422503145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AA4CE62-2BB2-4A07-9DF1-7B0C536DD139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AA4CE62-2BB2-4A07-9DF1-7B0C536DD139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AA4CE62-2BB2-4A07-9DF1-7B0C536DD139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AA4CE62-2BB2-4A07-9DF1-7B0C536DD139}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
